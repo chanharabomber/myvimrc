@@ -1,0 +1,24 @@
+export CLICOLOR=1
+#export LSCOLORS=GxBxCxDxexegedabagaced
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+alias ll='ls -alF'
+alias ls='ls -Gfh'
+#alias ll='ls -al'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
+
+#if [ "$color_prompt" = yes ]; then
+#    PS1='\[\033[01;32m\]\u@\h[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#else
+#    PS1=
+
+PS1="\[\e[0;32m\]\u@\h\[\e[0;0m\]:\[\e[0;34m\]\w\[\e[0;0m\] \n$ "
+#PS1='\n\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\n\\$\[\e[m\] \[\e[0;37m\]'
+if [ -f ~/.bashrc ] ; then
+. ~/.bashrc
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
